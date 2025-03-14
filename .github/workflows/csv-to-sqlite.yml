@@ -43,5 +43,13 @@ jobs:
         release_name: Automated Release ${{ steps.get_date.outputs.date }}
         draft: false
         prerelease: false
-        files: |
-          output/reference.db
+
+    - name: Upload Release Assets
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: output/reference.db
+        asset_name: reference.db
+        asset_content_type: application/octet-stream
