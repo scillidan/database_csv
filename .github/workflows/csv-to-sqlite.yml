@@ -1,0 +1,49 @@
+name: CSV to SQLite
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  csv-to-sqlite:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install sqlite-utils
+        run: |
+          python -m pip install --upgrade pip
+          pip install sqlite-utils
+
+      - name: Create SQLite databases from CSV files
+        run: |
+          mkdir -p databases
+          for csv_file in reference/*.csv; do
+            db_name="databases/$(basename "${csv_file%.csv}.db")"
+            sqlite-utils insert "$db_name" "$csv_file" --csv
+          done
+          for csv_file in resource/*.csv; do
+            db_name="databases/$(basename "${csv_file%.csv}.db")"
+            sqlite-utils insert "$db_name" "$csv_file" --csv
+          done
+
+      - name: Create GitHub Release
+        id: create_release
+        run: |
+          VERSION=$(date +'%Y%m%d%H%M%S')
+          echo "Creating release with version: $VERSION"
+          gh release create "$VERSION" databases/*.db --title "Release $VERSION" --notes "Databases created from CSV files"
+
+      - name: Upload Release Assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Release assets uploaded."
