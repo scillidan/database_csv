@@ -1,0 +1,58 @@
+name: Process CSV Files and Create Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install sqlite-utils
+      run: pip install sqlite-utils
+
+    - name: Process reference CSVs
+      run: |
+        mkdir -p output
+        for file in reference/*.csv; do
+          tablename=$(basename "$file" .csv)
+          sqlite-utils insert output/reference.db "$tablename" "$file" --csv
+        done
+    
+    - name: Get Commit Date
+      id: get_date
+      run: echo "::set-output name=date::$(date -u +'%Y-%m-%d')"
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.get_date.outputs.date }}
+        release_name: Automated Release ${{ steps.get_date.outputs.date }}
+        draft: false
+        prerelease: false
+
+    - name: Upload Release Assets
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: output/reference.db
+        asset_name: reference.db
+        asset_content_type: application/octet-stream
