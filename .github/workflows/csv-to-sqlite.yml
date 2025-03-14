@@ -19,11 +19,15 @@ jobs:
 
       - name: Create reference.db and insert data
         run: |
+          echo "Creating reference.db"
           sqlite-utils create reference.db
+          echo "Inserting data into reference.db"
           for file in reference/*.csv; do
             tablename=$(basename "$file" .csv)
+            echo "Inserting $file into table $tablename"
             sqlite-utils insert reference.db "$tablename" "$file" --csv
           done
+        shell: bash
 
       - name: Create release
         id: create_release
