@@ -3,7 +3,11 @@ name: Process CSV Files and Create Release
 on:
   push:
     branches:
-      - main  # Adjust this if you want the action to trigger on different branches
+      - main
+
+permissions:
+  contents: write
+  releases: write
 
 jobs:
   build:
@@ -28,7 +32,7 @@ jobs:
           tablename=$(basename "$file" .csv)
           sqlite-utils insert output/reference.db "$tablename" "$file" --csv
         done
-
+    
     - name: Get Commit Date
       id: get_date
       run: echo "::set-output name=date::$(date -u +'%Y-%m-%d')"
