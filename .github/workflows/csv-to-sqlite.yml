@@ -37,10 +37,19 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub provided token
         run: |
-          version=$(cat $GITHUB_ENV | grep version | cut -d '=' -f 2)
+          set -e  # Exit immediately if a command exits with a non-zero status
+          set -o pipefail  # Return the exit status of the last command in the pipeline that failed
+          
+          # Read the version from the environment
+          version=$(grep version $GITHUB_ENV | cut -d '=' -f 2)
+          if [ -z "$version" ]; then
+            echo "Error: Version not found in $GITHUB_ENV"
+            exit 1
+          fi
+
           echo "Creating release for version ${version}"
           gh release create "$version" reference.db resource.db --title "Release $version" --notes "Automated release for $version"
-        shell: bash
+        shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
 
       - name: Upload release artifacts
         uses: actions/upload-release-asset@v1
