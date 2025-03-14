@@ -1,68 +1,44 @@
-name: Database Insert and Release
+name: Process CSV Files and Create Release
 
 on:
   push:
     branches:
-      - main  # Adjust this if your default branch is different
+      - main  # Adjust this if you want the action to trigger on different branches
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Install sqlite-utils
-        run: |
-          pip install sqlite-utils
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
 
-      - name: Create reference.db and insert data
-        run: |
-          echo "Inserting data into reference.db"
-          for file in reference/*.csv; do
-            tablename=$(basename "$file" .csv)
-            echo "Inserting $file into table $tablename"
-            sqlite-utils insert reference.db "$tablename" "$file" --csv
-          done
-        shell: bash
-      
-      - name: Set version
-        run: |
-          version=$(date -u +"%Y-%m-%d")
-          echo "version=${version}" >> $GITHUB_ENV
-        shell: bash
+    - name: Install sqlite-utils
+      run: pip install sqlite-utils
 
-      - name: Create GitHub Release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub provided token
-        run: |
-          set -e  # Exit immediately if a command exits with a non-zero status
-          set -o pipefail  # Return the exit status of the last command in the pipeline that failed
-          
-          # Read the version from the environment
-          version=$(grep version $GITHUB_ENV | cut -d '=' -f 2)
-          if [ -z "$version" ]; then
-            echo "Error: Version not found in $GITHUB_ENV"
-            exit 1
-          fi
+    - name: Process reference CSVs
+      run: |
+        mkdir -p output
+        for file in reference/*.csv; do
+          tablename=$(basename "$file" .csv)
+          sqlite-utils insert output/reference.db "$tablename" "$file" --csv
+        done
 
-          echo "Creating release for version ${version}"
-          gh release create "$version" reference.db resource.db --title "Release $version" --notes "Automated release for $version"
-        shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-
-      - name: Upload release artifacts
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: reference.db
-          asset_name: reference.db
-          asset_content_type: application/x-sqlite3
-
-      - name: Upload resource.db
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: resource.db
-          asset_name: resource.db
-          asset_content_type: application/x-sqlite3
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.event.head_commit.timestamp | date('YYYY-MM-DD') }}
+        release_name: Automated Release ${{ github.event.head_commit.timestamp | date('YYYY-MM-DD') }}
+        draft: false
+        prerelease: false
+        files: |
+          output/reference.db
+          output/resource.db
