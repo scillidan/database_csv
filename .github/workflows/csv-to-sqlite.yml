@@ -29,16 +29,19 @@ jobs:
           sqlite-utils insert output/reference.db "$tablename" "$file" --csv
         done
 
+    - name: Get Commit Date
+      id: get_date
+      run: echo "::set-output name=date::$(date -u +'%Y-%m-%d')"
+
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.event.head_commit.timestamp | date('YYYY-MM-DD') }}
-        release_name: Automated Release ${{ github.event.head_commit.timestamp | date('YYYY-MM-DD') }}
+        tag_name: ${{ steps.get_date.outputs.date }}
+        release_name: Automated Release ${{ steps.get_date.outputs.date }}
         draft: false
         prerelease: false
         files: |
           output/reference.db
-          output/resource.db
