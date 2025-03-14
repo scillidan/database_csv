@@ -28,12 +28,8 @@ jobs:
           mkdir -p databases
           for csv_file in reference/*.csv; do
             db_name="databases/$(basename "${csv_file%.csv}.db")"
-            sqlite-utils insert "$db_name" "$csv_file" --csv
+            sqlite-utils insert "$db_name" "$csv_file" "$csv_file.csv" --csv
           done
-          # for csv_file in resource/*.csv; do
-            # db_name="databases/$(basename "${csv_file%.csv}.db")"
-            # sqlite-utils insert "$db_name" "$csv_file" --csv
-          # done
 
       - name: Create GitHub Release
         id: create_release
