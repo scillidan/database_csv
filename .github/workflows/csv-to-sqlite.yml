@@ -30,10 +30,10 @@ jobs:
             db_name="databases/$(basename "${csv_file%.csv}.db")"
             sqlite-utils insert "$db_name" "$csv_file" --csv
           done
-          for csv_file in resource/*.csv; do
-            db_name="databases/$(basename "${csv_file%.csv}.db")"
-            sqlite-utils insert "$db_name" "$csv_file" --csv
-          done
+          # for csv_file in resource/*.csv; do
+            # db_name="databases/$(basename "${csv_file%.csv}.db")"
+            # sqlite-utils insert "$db_name" "$csv_file" --csv
+          # done
 
       - name: Create GitHub Release
         id: create_release
