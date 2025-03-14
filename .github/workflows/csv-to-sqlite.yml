@@ -26,13 +26,21 @@ jobs:
             sqlite-utils insert reference.db "$tablename" "$file" --csv
           done
         shell: bash
-
-      - name: Create release
-        id: create_release
+      
+      - name: Set version
         run: |
           version=$(date -u +"%Y-%m-%d")
           echo "version=${version}" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub provided token
+        run: |
+          version=$(cat $GITHUB_ENV | grep version | cut -d '=' -f 2)
+          echo "Creating release for version ${version}"
           gh release create "$version" reference.db resource.db --title "Release $version" --notes "Automated release for $version"
+        shell: bash
 
       - name: Upload release artifacts
         uses: actions/upload-release-asset@v1
