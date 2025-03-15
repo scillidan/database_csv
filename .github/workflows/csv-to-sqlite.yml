@@ -11,7 +11,12 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        asset:
+          - { path: 'output/reference.db', name: 'reference.db' }
+          - { path: 'output/resource.db', name: 'resource.db' }
+          - { path: 'output/asset.db', name: 'asset.db' }
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -62,13 +67,3 @@ jobs:
         asset_path: ${{ matrix.asset_path }}
         asset_name: ${{ matrix.asset_name }}
         asset_content_type: application/octet-stream
-      strategy:
-        matrix:
-          asset_path:
-            - output/reference.db
-            - output/resource.db
-            - output/asset.db
-          asset_name:
-            - reference.db
-            - resource.db
-              - asset.db
