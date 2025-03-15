@@ -52,25 +52,23 @@ jobs:
       with:
         tag_name: ${{ steps.get_date.outputs.date }}
         release_name: Automated Release ${{ steps.get_date.outputs.date }}
-        draft: false
-        prerelease: false
 
-      - name: Upload db files
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ matrix.asset_path }}
-          asset_name: ${{ matrix.asset_name }}
-          asset_content_type: application/octet-stream
-        strategy:
-          matrix:
-            asset_path:
-              - output/reference.db
-              - output/resource.db
-              - output/asset.db
-            asset_name:
-              - reference.db
-              - resource.db
+    - name: Upload db files
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ${{ matrix.asset_path }}
+        asset_name: ${{ matrix.asset_name }}
+        asset_content_type: application/octet-stream
+      strategy:
+        matrix:
+          asset_path:
+            - output/reference.db
+            - output/resource.db
+            - output/asset.db
+          asset_name:
+            - reference.db
+            - resource.db
               - asset.db
