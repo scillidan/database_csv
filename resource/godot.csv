@@ -1,0 +1,85 @@
+tag,mark,title,url,subscribe
+fade,\,2D Shapes,https://github.com/TechnocatDev/2d-shapes,download
+path,\,A Star 2D Grid Node,https://github.com/Firemanarg/godot-astar-2d-grid-node,download
+icon,\,Action Icon,https://github.com/KoBeWi/Godot-Action-Icon,download
+anime,\,Anima for Godot 4,https://github.com/ceceppa/anima-godot-4,download
+anime,\,AnimatedButton,https://github.com/AdilDevStuff/AnimatedButton,download
+audio,\,Audio Mixer Visualizer,https://github.com/Landeplage/Godot-Audio-Mixer-Visualizer,download
+audio,\,AudioStream Subtitle,https://github.com/S83gamedev/AudioStream-Subtitle-Plugin,download
+edit,\,AutoSaver Toggle for Godot Editor (C#),https://github.com/vrravalos/AutoSaver-for-Godot,download
+dialogue,\,Clyde Dialogue,https://github.com/viniciusgerevini/godot-clyde-dialogue,download
+audio,\,Color Preview,https://github.com/Qubus0/GodotColorPreview,download
+input,\,Controller Icons,https://github.com/rsubtil/controller_icons/,download
+input,\,ControlsRemap resource,https://github.com/KoBeWi/Godot-Input-Remap,download
+input,\,Cursor Shape Previewer,https://github.com/zaevi/godot-cursor-shape-previewer,download
+dialogue,\,Dialogic 2,https://github.com/dialogic-godot/dialogic,source
+color,\,Dialogue Engine,https://github.com/Rubonnek/dialogue-engine,download
+dialogue,\,Dialogue Nodes,https://github.com/nagidev/DialogueNodes,download
+inspector,\,Dictionary Inspector,https://github.com/don-tnowe/godot-dictionary-inspector,download
+editor,\,Dock Slot Expander,https://github.com/bypell/dock_slot_expander,download
+tool,\,Fluent Translation,https://github.com/RedMser/godot-fluent-translation,download
+format,\,Format on Save,https://github.com/ryan-haskell/gdformat-on-save,download
+script,\,GDScript ECS framework,https://github.com/yihrmc/gdscript-ecs,download
+tool,\,GDShell,https://github.com/Kubulambula/Godot-GDShell,download
+dialogue,\,GDrama,https://github.com/moraguma/GDrama,download
+window,\,GameGUI,https://github.com/brombres/Godot-GameGUI,download
+tile,\,Github To Itch,https://github.com/MeagherGames/github_to_itch,download
+shader,\,Godot Audio Events,https://github.com/FreekDS/GodotAudioEvents,download
+card,\,Godot Card Parallax,https://github.com/Trixelized/godotCardParallax,download
+scene,\,Godot ECS,https://github.com/baiXfeng/godot-ecs,download
+kit,\,Godot Essentials,https://gitlab.com/godot-tools/godot-essentials,download
+graphic,\,Godot GIF,https://github.com/BOTLANNER/godot-gif,download
+kit,\,Godot Gameplay Systems,https://github.com/OctoD/godot-gameplay-systems,download
+script,\,Godot MVC,https://github.com/baiXfeng/godot-mvc,download
+graphic,\,Godot QOI,https://github.com/DmitriySalnikov/godot_qoi,download
+script,\,Godot Rollback Netcode,https://gitlab.com/snopek-games/godot-rollback-netcode,download
+editor,\,Godot Tabs,https://github.com/Cevantime/godot_tabs,download
+database,\,Godot-SQLite,https://github.com/2shady4u/godot-sqlite,download
+dialogue,\,GodotSize,https://github.com/the-sink/godotsize,download
+steam,\,GodotSteam 4 Example Project,https://github.com/GodotSteam/GodotSteam-Example-Project,download
+input,\,Godot_multidirectional_joystick for Godot 4,https://github.com/JstnJrg/Godot_multidirectional_joystick,download
+input,\,InputController,https://github.com/sscovil/godot-input-controller-addon,download
+input,\,Inputty,https://codeberg.org/MxSophie/Inputty,download
+inspector,\,"Inspector Extender - Buttons, Warnings, More",https://github.com/don-tnowe/godot-inspector-extender,download
+sound,\,Kenney Interface Sounds,https://github.com/Calinou/kenney-interface-sounds,download
+sound,\,Kenney UI Audio,https://github.com/Calinou/kenney-ui-audio,download
+test,\,Label Font Auto Sizer - Godot 4,https://github.com/LuisEscorza/GodotLabelFontAutoSizer,download
+node,\,Line Up Tool,https://github.com/KaanAlpar/godot-plugin-course-line-up-tool,download
+dialogue,\,Minimal Godot Theme,https://github.com/passivestar/godot-minimal-theme,source
+ui,\,Monologue,https://github.com/atomic-junky/Monologue,download
+path,\,Most Simple Scene Loader,https://github.com/MikeAmputer/godot-simple-scene-loader,download
+translate,\,POT Word - POT and PO file editor,https://github.com/diklor/pot_word,download
+test,\,Panku Console,https://github.com/Ark2000/PankuConsole,download
+scene,\,Parallax2D Preview,https://github.com/KoBeWi/Godot-Parallax2D-Preview,download
+stream,\,Pinned Debugger Tabs,https://github.com/Wierdox/godot_pinned_debugger_tabs,download
+kit,\,Popochiu,https://github.com/carenalgas/popochiu,download
+node,\,Prefab,https://github.com/KoBeWi/Godot-Prefab,download
+demo,\,Puzzle Dependencies,https://github.com/nathanhoad/godot_puzzle_dependencies,download
+anime,\,QuickAudio,https://github.com/BtheDestroyer/Godot_QuickAudio,download
+audio,\,Resonate,https://github.com/hugemenace/resonate,download
+text,\,RichTextLabel2,https://github.com/chairfull/GodotRichTextLabel2,download
+state,\,Saturn - Simple Cascade State Machine,https://github.com/GumpDev/saturn,download
+scene,\,Scene Manager,https://github.com/glass-brick/Scene-Manager,download
+scene,\,Scene Manager 02,https://github.com/m-canton/godot-scene-manager,download
+scene,\,Scene Manager 03,https://github.com/maktoobgar/scene_manager,download
+scene,\,Scene Palette,https://github.com/cixil/godot-scene-palette,download
+script,\,Script Panel +,https://github.com/Loregret/script-panel-plus/,download
+editor,\,Script-IDE,https://github.com/Maran23/script-ide,download
+script,\,ShaderV - 2D Visual Shader Node Library (Godot 4),https://github.com/arkology/ShaderV,download
+input,\,SmoothScroll,https://github.com/SpyrexDE/SmoothScroll,download
+audio,\,Sound Manager,https://github.com/nathanhoad/godot_sound_manager,download
+translate,\,Spin Button - Horizontal Selector with extended options,https://github.com/yudinikita/godot-spin-button,download
+sound,\,Steam API,https://github.com/samsface/godot-steam-api,download
+steam,\,Sync Deck,https://github.com/Michael-Jalloh/SyncDeck,download
+input,\,Template for pathfinding games,https://github.com/xolatgames/Pathfinding/,download
+database,\,Text Database,https://github.com/KoBeWi/Godot-Text-Database,download
+texture,\,TextureFont,https://github.com/Mickeon/Godot-Texture-Font,download
+dialogue,\,Theatre,https://github.com/nndda/Theatre,download
+text,\,TileMapLayer Basics in 4.3,https://github.com/Goldenlion5648/TileMapLayersTutorial,download
+test,\,Tracer,https://github.com/wyvernbw/tracer.gd,download
+explorer,\,Universal Fade,https://github.com/KoBeWi/Godot-Universal-Fade,download
+node,\,Visibility shortcut,https://github.com/Janders1800/godot-visibility-shortcut,download
+system,\,Wyvernshield 2 - Character Upgrades for Combat Systems,https://github.com/don-tnowe/godot-wyvernshield-triggers,download
+tool,\,YAT - Yet Another Terminal (C#),https://github.com/MASSHUU12/godot-yat,download
+tilemap,\,YATI (Yet Another Tiled Importer),https://github.com/Kiamo2/YATI,download
+audio,\,gdsam for Godot,https://github.com/deadpixelsociety/gdsam-plugin,download

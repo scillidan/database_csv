@@ -1,0 +1,15 @@
+tag,mark,title,url,subscribe
+bucket,cache,Scoop Bucket for Sysinternals,https://github.com/niheaven/scoop-sysinternals,""
+bucket,mark,Scoop Extras,https://github.com/ScoopInstaller/Extras,""
+bucket,extra,Scoop Java,https://github.com/ScoopInstaller/Java,""
+bucket,mark,Scoop Main,https://github.com/ScoopInstaller/Main,""
+bucket,extra,Scoop Versions,https://github.com/ScoopInstaller/Versions,""
+bucket,cache,Scoop bucket for Nerd Fonts,https://github.com/matthewjberger/scoop-nerd-fonts,""
+bucket,cache,Scoop 应用库中国加速,https://github.com/duzyn/scoop-cn,""
+scoop,cache,Shim,https://github.com/ScoopInstaller/Shim,""
+bucket,cache,dorado,https://github.com/chawyehsu/dorado,""
+bucket,cache,rasa,https://github.com/rasa/scoops,""
+bucket,extra,scoop-games,https://github.com/Calinou/scoop-games,""
+bucket,extra,scoop-nirsoft,https://github.com/kodybrown/scoop-nirsoft,""
+search,mark,scoop-search,https://github.com/shilangyu/scoop-search,""
+search,cache,scoop-search-multisource,https://github.com/plicit/scoop-search-multisource,release

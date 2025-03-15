@@ -1,0 +1,11 @@
+tag,mark,title,url,subscribe
+complete,cache,CheatCompletions,https://github.com/HeyItsJono/CheatCompletions),""
+clink,mark,Clink,https://github.com/chrisant996/clink),release
+fzf,mark,Clink Gizmos,https://github.com/chrisant996/clink-gizmos),""
+conemu,mark,ConEmu,https://github.com/Maximus5/ConEmu),release
+fzf,mark,FZF integration for Clink,https://github.com/chrisant996/clink-fzf),""
+cd,mark,HomeClink,https://github.com/HeyItsJono/HomeClink),""
+complete,mark,clink-completions,https://github.com/vladimir-kotikov/clink-completions),""
+complete,later,clink-git-extensions,https://github.com/davidmarek/clink-git-extensions),""
+jump,cache,z.lua,https://github.com/skywind3000/z.lua),""
+"clink,jump",mark,zoxide support for clink,https://github.com/shunsambongi/clink-zoxide),""
