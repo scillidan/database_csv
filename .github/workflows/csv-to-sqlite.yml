@@ -11,12 +11,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        asset:
-          - { path: 'output/reference.db', name: 'reference.db' }
-          - { path: 'output/resource.db', name: 'resource.db' }
-          - { path: 'output/asset.db', name: 'asset.db' }
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -66,12 +60,35 @@ jobs:
         tag_name: ${{ env.date }}
         release_name: Automated Release ${{ env.date }}
 
-    - name: Upload db files
+    - name: Upload reference.db
+      if: steps.create_release.outputs.upload_url != ''
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ${{ matrix.asset.path }} # Correctly referenced
-        asset_name: ${{ matrix.asset.name }} # Correctly referenced
+        asset_path: output/reference.db
+        asset_name: reference.db
+        asset_content_type: application/octet-stream
+
+    - name: Upload resource.db
+      if: steps.create_release.outputs.upload_url != ''
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: output/resource.db
+        asset_name: resource.db
+        asset_content_type: application/octet-stream
+
+    - name: Upload asset.db
+      if: steps.create_release.outputs.upload_url != ''
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: output/asset.db
+        asset_name: asset.db
         asset_content_type: application/octet-stream
