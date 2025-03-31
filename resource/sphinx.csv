@@ -1,7 +1,7 @@
 tag,mark,title,url,subscribe
 "",cache,Read the Docs Sphinx Theme,https://github.com/readthedocs/sphinx_rtd_theme,""
 "",cache,Sphinx Comments,https://github.com/executablebooks/sphinx-comments,""
-"",mark,Sphinx DataTables,https://sharm294.github.io/sphinx-datatables/,""
+"",cache,Sphinx DataTables,https://sharm294.github.io/sphinx-datatables/,""
 "",mark,Sphinx Inline Tabs,https://github.com/pradyunsg/sphinx-inline-tabs,""
 "",cache,Sphinx Sitemap Generator Extension,https://github.com/jdillard/sphinx-sitemap,""
 "",cache,autoclasstoc,https://autoclasstoc.readthedocs.io/en/latest/,""
@@ -17,4 +17,6 @@ tag,mark,title,url,subscribe
 "",cache,sphinxcontrib-images,https://github.com/sphinx-contrib/images,""
 "",cache,sphinxcontrib-mermaid,https://github.com/mgaitan/sphinxcontrib-mermaid,""
 "",cache,sphinxcontrib-programoutput,https://github.com/OpenNTI/sphinxcontrib-programoutput,""
+video,mark,sphinxcontrib-video,https://github.com/sphinx-contrib/video,""
 "",cache,sphinxcontrib.autoprogram,https://pythonhosted.org/sphinxcontrib-autoprogram/,""
+image,mark,sphinxext-photofinish,https://github.com/wpilibsuite/sphinxext-photofinish,""

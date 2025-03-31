@@ -1,0 +1,9 @@
+tag,mark,title,url,subscribe
+"script,linux",cache,Acute,https://terokarvinen.com/2017,""
+hunspell,cache,Dictionaries for Sublime Text,https://github.com/titoBouzout/Dictionaries,""
+"",mark,GoldenDict,https://github.com/goldendict/goldendict,release
+"",cache,GoldenDict tools,https://github.com/Ajatt-Tools/gd-tools,""
+"",cache,GoldenDict-DeepL,https://github.com/DevJogger/GoldenDict-DeepL,""
+"",cache,GoldenDict-ng,https://github.com/xiaoyifang/goldendict-ng,""
+tmx2,cache,TMX to Goldendict Convertor,https://github.com/Celso-Scott/TMX-to-Goldendict-Converter,""
+dsl,extra,dictzip for Windows 10 (x64),https://github.com/KaseyJenkins/dictzip-win64,""

@@ -37,6 +37,7 @@ image,cache,MkDocs Resize Images Plugin,https://github.com/JakubAndrysek/mkdocs-
 link,mark,MkDocs Site URLs Plugin,https://github.com/OctoPrint/mkdocs-site-urls,""
 vercel,cache,MkDocs Vercel Password Protection Plugin,https://github.com/six-two/mkdocs-vercel-pw-plugin,""
 video,mark,MkDocs Video,https://github.com/soulless-viewer/mkdocs-video,""
+marimo,cache,MkDocs marimo Plugin,https://github.com/marimo-team/mkdocs-marimo,""
 translate,cache,MkDocs static i18n plugin,https://github.com/ultrabug/mkdocs-static-i18n,""
 debug,cache,MkDocs-Test,https://github.com/fralau/mkdocs-test,""
 dev,cache,MkNodes,https://github.com/phil65/mkdocs_mknodes,""

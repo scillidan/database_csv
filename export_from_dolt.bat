@@ -29,6 +29,7 @@ dolt sql -r csv -q "SELECT * FROM `directory_opus`" > %RESOURCE%\directory_opus.
 dolt sql -r csv -q "SELECT * FROM `discord`" > %RESOURCE%\discord.csv
 dolt sql -r csv -q "SELECT * FROM `github_cli`" > %RESOURCE%\github_cli.csv
 dolt sql -r csv -q "SELECT * FROM `godot`" > %RESOURCE%\godot.csv
+dolt sql -r csv -q "SELECT * FROM `goldendict`" > %RESOURCE%\goldendict.csv
 dolt sql -r csv -q "SELECT * FROM `joplin`" > %RESOURCE%\joplin.csv
 dolt sql -r csv -q "SELECT * FROM `keypirinha`" > %RESOURCE%\keypirinha.csv
 dolt sql -r csv -q "SELECT * FROM `latex`" > %RESOURCE%\latex.csv
@@ -36,6 +37,7 @@ dolt sql -r csv -q "SELECT * FROM `linux`" > %RESOURCE%\linux.csv
 dolt sql -r csv -q "SELECT * FROM `lobechat`" > %RESOURCE%\lobechat.csv
 dolt sql -r csv -q "SELECT * FROM `logseq`" > %RESOURCE%\logseq.csv
 dolt sql -r csv -q "SELECT * FROM `love`" > %RESOURCE%\love.csv
+dolt sql -r csv -q "SELECT * FROM `midjourney`" > %RESOURCE%\midjourney.csv
 dolt sql -r csv -q "SELECT * FROM `mkdocs`" > %RESOURCE%\mkdocs.csv
 dolt sql -r csv -q "SELECT * FROM `mpv`" > %RESOURCE%\mpv.csv
 dolt sql -r csv -q "SELECT * FROM `neovim`" > %RESOURCE%\neovim.csv

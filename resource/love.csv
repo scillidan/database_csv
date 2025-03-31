@@ -16,6 +16,7 @@ packager,cache,LÖVE Game Development & Automated Build System,https://github.co
 platform,cache,LÖVE Potion,https://github.com/lovebrew/lovepotion,""
 function,cache,LÖVEly Trees,https://github.com/Nrosa01/LOVElyTrees,
 toast,cache,Lövely Toasts,https://codeberg.org/togfox/Lovely-Toasts,""
+library,cache,Polysec,https://github.com/dknight/polysec,""
 txt,cache,SYSL-Text,https://github.com/sysl-dev/SYSL-Text,""
 gui,cache,Slab,https://github.com/flamendless/Slab,""
 action,cache,Walt,https://github.com/davisdude/Walt,""

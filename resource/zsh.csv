@@ -14,6 +14,7 @@ command,cache,Pueue,https://github.com/Nukesor/pueue,""
 recent,cache,RESH,https://github.com/curusarn/resh,""
 tmux,cache,Session Sauce,https://github.com/ChrisPenner/session-sauce,""
 calculator,cache,Simple zsh calculator,https://github.com/arzzen/calc.plugin.zsh,""
+jump,cache,Skipper.nvim,https://github.com/Beargruug/skipper.nvim,
 vim,cache,TOME Playbooks,https://github.com/laktak/tome,""
 tmux,cache,Tmuxinator,https://github.com/tmuxinator/tmuxinator,""
 gpt,cache,ZSH AI Commands,https://github.com/muePatrick/zsh-ai-commands,""
@@ -72,10 +73,12 @@ skim,cache,skim,https://github.com/lotabout/skim,""
 ssh,cache,thefly,https://github.com/joknarf/thefly,""
 tmux,cache,tmux,https://github.com/tmux/tmux,""
 git,extra,ugit,https://github.com/Bhupesh-V/ugit,""
+anime,cache,undo-glow.nvim,https://github.com/y3owk1n/undo-glow.nvim/,
 jump,mark,wd,https://github.com/mfaerevaag/wd,""
 ssh,cache,xxh,https://github.com/xxh/xxh,""
 jump,cache,z.lua,https://github.com/skywind3000/z.lua,""
 git,cache,zeno.zsh,https://github.com/yuki-yano/zeno.zsh,""
+display,mark,zenquotes,https://github.com/aminelch/zenquotes,
 manage,mark,zinit,https://github.com/zdharma-continuum/zinit,""
 jump,mark,zoxide,https://github.com/ajeetdsouza/zoxide,release
 manage,cache,zplug,https://github.com/zplug/zplug,""
